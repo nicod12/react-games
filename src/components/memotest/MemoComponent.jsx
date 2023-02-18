@@ -33,9 +33,13 @@ const MemoComponent = () => {
 
   return (
       <section>
-        <h3 className='text-center sm:text-sm md:text-md lg:text-lg xl:text-2xl mb-28'>Memotest is a game that stimulates memory and observation skills.</h3>
+        <h3 className='text-center sm:text-sm md:text-md lg:text-lg xl:text-2xl 
+        sm:mb-14 md:mb-28 lg:mb-28 xl:mb-28'
+        >
+          Memotest is a game that stimulates memory and observation skills.
+        </h3>
         <ul className='grid grid-cols-4 gap-6
-
+                    sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto 
                     border border-black sm:p-2 md:p-2 lg:p-6 xl:p-8 
                     bg-gradient-to-bl from-slate-200 to-gray-300 shadow-lg'
       >

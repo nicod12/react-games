@@ -73,7 +73,7 @@ const GuessPlayerComp = () => {
           <img 
             src={`${url}${players[MATCH]}`} 
             alt="icon"
-            className={`mb-4 mt-4 sm:w-56 sm:h-72 md:w-56 md:h-72 lg:w-80 lg:h-80 xl:w-72 xl:h-96 ${hasWon ? "" : "blur-sm"}`}
+            className={`mb-4 mt-4 sm:w- sm:h-auto md:w-56 md:h-72 lg:w-80 lg:h-80 xl:w-72 xl:h-96 ${hasWon ? "" : "blur-sm"}`}
           />
           {
             hasWon ? (
