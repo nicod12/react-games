@@ -5,7 +5,9 @@ import { games } from '../models/data'
 const ContainerComp = () => {
   return (
    <main>
-    <section className='flex items-center justify-center sm:mt-12 md:mb-12 lg:mb-12 xl:mb-12 '>
+    <section className='flex items-center justify-center 
+                        sm:mt-12 md:mb-12 lg:mb-12 xl:mb-12
+                        sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto '>
      <h1 className='text-center font-bold sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl '>WP-Games</h1>
      <img 
         src="https://i.postimg.cc/j21dZpXz/pngegg-4.png" 
@@ -13,7 +15,9 @@ const ContainerComp = () => {
         className='md:w-24 md:h-10 lg:w-24 lg:h-14 xl:w-32 xl:h-16 sm:w-8 sm:h-6'
     />
     </section>
-     <section className="m-6 grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 sm:gap-10 md:gap-7 lg:gap-9 xl:gap-14">
+        <section className="m-6 grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 
+                            sm:gap-10 md:gap-7 lg:gap-9 xl:gap-14
+                            sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto">
         {
             games.map(item => {
                 return(
