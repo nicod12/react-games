@@ -1,0 +1,68 @@
+export const games = [
+    {
+        id:1,
+        name:"Memotest",
+        image:"https://i.pinimg.com/236x/f6/f9/54/f6f95475f0343714a046804f4db11da2--super-mario-bros-party-ideas-super-mario-birthday.jpg",
+        path:'/memotest'
+    },
+    {
+        id:2,
+        name:"Wpm",
+        image:"https://www.ratatype.com/static/i/learn/keyboard/en/keyboard.webp",
+        path:'/wpm'
+    },
+    {
+        id:3,
+        name:"Who is it?",
+        image:"https://i.postimg.cc/66k06mjf/pelota.png",
+        path:"/gteam"
+    }
+]
+
+export const words = [
+    "puma",
+    "leon",
+    "conejo",
+    "serpiente",
+    "aguila",
+    "avestruz",
+    "oso",
+    "tigre",
+    "loro",
+    "elefante",
+    "jaguar",
+    "mono",
+    "jirafa",
+    "perico",
+    "venado",
+    "coyote",
+    "canguro",
+    "antilope",
+    "burro",
+    "ciervo",
+    "gorilla",
+    "ardilla",
+    "caballo",
+    "suricata",
+    "halcon",
+    "pato",
+    "pinguino",
+    "gallina",
+    "llama",
+    "buho",
+    "cisne",
+    "pavo",
+    "tiburon",
+    "lobo",
+    "ganso",
+    "paloma",
+    "mantarraya",
+    "flamenco",
+    "anguila",
+    "cacatua",
+    "bisonte",
+    "cebra",
+    "bufalo",
+    "camello",
+    "guacamayo"
+].sort(() => Math.random() - 0.44);
