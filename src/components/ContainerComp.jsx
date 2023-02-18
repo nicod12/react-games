@@ -12,7 +12,7 @@ const ContainerComp = () => {
      <img 
         src="https://i.postimg.cc/j21dZpXz/pngegg-4.png" 
         alt="icon" 
-        className='md:w-24 md:h-10 lg:w-24 lg:h-14 xl:w-32 xl:h-16 sm:w-8 sm:h-6'
+        className='sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto'
     />
     </section>
         <section className="m-6 grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 
@@ -27,7 +27,7 @@ const ContainerComp = () => {
                     >
                         <img 
                             src={item.image} 
-                            className="h-32 w-40" 
+                            className="sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto" 
                             alt={`image${item.name}`} />
                         <div className=' p-2'>
                             <h2 
