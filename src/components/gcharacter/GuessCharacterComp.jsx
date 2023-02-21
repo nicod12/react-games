@@ -62,7 +62,7 @@ const GuessCharacterComp = () => {
   return (
     <div className='flex flex-col items-center justify-center'>
         <p className='w-auto sm:w-auto md:w-auto lg:w-auto xl:w-auto  text-lg sm:text-md md:text-xl lg:text-2xl xl:text-4xl
-                       mb-12 mt-6 sm:mb-6 md:mb-20 lg:mb-40 xl:mb-20'
+                       mb-12 mt-6 sm:mb-6 md:mb-20 lg:mb-20 xl:mb-20'
         >
           Guess the character
         </p>
@@ -101,7 +101,7 @@ const GuessCharacterComp = () => {
                 <div>
                   <form 
                     onSubmit={handleSubmit}
-                    className='mt-12 flex flex-col'>
+                    className='mt-6 flex flex-col'>
                     <input 
                       ref={inputRef}
                       type="text" 

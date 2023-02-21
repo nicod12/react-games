@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
 export const images = [
-  "https://i.postimg.cc/jjK8kX13/estrella.png",
-  "https://i.postimg.cc/tJS3Ddxf/hongo.png",
-  "https://i.postimg.cc/PqJkRT9R/luigi.png",
-  "https://i.postimg.cc/y8WQqx6c/mario.png",
-  "https://i.postimg.cc/3NJjgfdm/moneda.png",
-  "https://i.postimg.cc/QNRJym9g/planta.png",
-  "https://i.postimg.cc/s2wJHR71/yoshi.png",
-  "https://i.postimg.cc/1tg7Lb4K/fantasma.png"
+"https://cdn-icons-png.flaticon.com/128/9412/9412332.png",
+"https://cdn-icons-png.flaticon.com/128/6466/6466948.png",
+"https://cdn-icons-png.flaticon.com/128/4251/4251687.png",
+"https://cdn-icons-png.flaticon.com/128/785/785126.png",
+"https://cdn-icons-png.flaticon.com/128/1144/1144441.png",
+"https://cdn-icons-png.flaticon.com/128/4932/4932383.png",
 ].flatMap((image) => [`a|${image}`, `b|${image}`]).sort(() => Math.random() - 0.5);
 
 const MemoComponent = () => {
-    const [guessed, setGuessed] = useState([]);
+  const [guessed, setGuessed] = useState([]);
   const [selected, setSelected] = useState([]);
 
   useEffect(() => {
@@ -32,16 +30,12 @@ const MemoComponent = () => {
   }, [guessed])
 
   return (
-      <section>
-        <h3 className='text-center sm:text-sm md:text-md lg:text-lg xl:text-2xl 
-        sm:mb-14 md:mb-28 lg:mb-28 xl:mb-28'
+      <section className='flex flex-col items-center justify-center'>
+        <h3 className='mb-16 text-center'
         >
           Memotest is a game that stimulates memory and observation skills.
         </h3>
-        <ul className='grid grid-cols-4 gap-6
-                    sm:w-auto sm:h-auto md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-auto xl:h-auto 
-                    border border-black sm:p-2 md:p-2 lg:p-6 xl:p-8 
-                    bg-gradient-to-bl from-slate-200 to-gray-300 shadow-lg'
+        <ul className='border border-gray-300 rounded-sm p-4 grid grid-cols-3 gap-3 shadow-2xl'
       >
         {
           images.map((image) => {
@@ -50,25 +44,19 @@ const MemoComponent = () => {
               <li
                 onClick={() => selected.length < 2 && setSelected(selected => selected.concat(image))}  
                 key={image} 
-                className="list-none cursor-pointer 
-                            rounded-lg border-x-2 border-black"
-                            
-                          
+                className="border border-black rounded-md p-1 cursor-pointer hover:bg-gray-50 hover:opacity-50"              
               >
                 {selected.includes(image) || guessed.includes(image) ? (
                   <img 
                   src={url} 
                   alt="..." 
-                  className='sm:w-32 sm:h-24 md:w-32 md:h-24 lg:w-32 lg:h-24 xl:w-44 xl:h-28'
                 />
                 ) : (
                   
                   <img
                     key={url} 
-                    src="https://i.postimg.cc/R0nYjhCq/interrogaci-n.png"
+                    src="https://cdn-icons-png.flaticon.com/128/3109/3109891.png"
                     alt="..."
-                    className='sm:w-32 sm:h-24 md:w-32 md:h-24 lg:w-32 lg:h-24 xl:w-44 xl:h-28 grayscale '
-                    
                   />
                 )}
               </li>
