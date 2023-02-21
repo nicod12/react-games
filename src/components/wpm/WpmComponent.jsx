@@ -16,7 +16,7 @@ const WpmComponent = () => {
  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(buffer.value === word) {
+    if(buffer.value.toLowerCase() === word) {
       setWord(words[Math.random() * words.length | 0]);
       setCharacterCount(characterCount => characterCount + word.length);
     }else {
@@ -48,33 +48,33 @@ const WpmComponent = () => {
 
     
   return (
-    <section>
-      <h3 className='text-center sm:mb-4 md:mb-8 lg:mb-12 xl:mb-16
+    <section className='mb-16 sm:mb-20 md:mb-24 lg:mb-32 xl:mb-32'>
+      <h3 className='text-center mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-16
         sm:text-lg md:text-2xl lg:text-2xl xl:text-5xl'
         >
         Measure your speed in words per minute.
       </h3>
       <div className='flex flex-col gap-3 text-center'>
-        {Boolean(time) && <h2 className='sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
-                                         sm:mb-2 md:mb-6 lg:mb-6 xl:mb-8 font-bold'
+        {Boolean(time) && <h2 className='text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+                                         mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-8 font-bold uppercase'
                           >
                             {word}
                           </h2>}
           {
             errors.value ? (
-              <p className='mb-2 sm:text-xl md:text-xl lg:text-2xl xl:text-4xl'>
+              <p className='mb-2 text-red-600  sm:text-xl md:text-xl lg:text-2xl xl:text-4xl'>
                 Wrong words: {errors.value}
               </p>
             ): (
               ""
             )
           }
-        <h3 className='sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Character typed: {characterCount}</h3>
-        <h3 className='sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Remaining time: {time}</h3>
+        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Character typed: {characterCount}</h3>
+        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Remaining time: {time}</h3>
         {
           time ? (
             <form onSubmit={handleSubmit}>
-              <div className='flex items-center w-auto- h-auto'>
+              <div className='flex flex-col items-center justify-center  sm:flex-row md:flex-row lg:flex-row xl:flex-row w-auto h-auto'>
                 <input 
                       type="text"
                       autoFocus
@@ -86,7 +86,8 @@ const WpmComponent = () => {
                   <button 
                       className='bg-gray-800 hover:bg-black
                               text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl 
-                              sm:p-none md:p-1 lg:p-1 xl:p-1 ' 
+                               p-2 sm:p-0 md:p-1 lg:p-1 xl:p-1
+                               mt-3 sm:m-0 md:m-0 lg:m-0 xl:m-0 w-64 sm:w-auto md:w-auto lg:w-auto xl:w-auto' 
                       type='submit'
                   >
                         Submit
@@ -102,7 +103,7 @@ const WpmComponent = () => {
                         text-white font-bold py-2 px-4 rounded 
                           shadow-sm shadow-black border border-gray-300
                           sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl
-                          sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6"
+                          mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12"
               >
                 Play
               </button>

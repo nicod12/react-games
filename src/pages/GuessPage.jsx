@@ -1,13 +1,14 @@
 import React from 'react'
 import BackComponent from '../components/BackComponent';
-import GuessPlayerComp from '../components/tfootball/GuessPlayerComp';
+import GuessCharacterComp from '../components/gcharacter/GuessCharacterComp';
+
 
 
 
 const GuessPage = () => {
   return (
     <div className='flex flex-col items-center'>
-        <GuessPlayerComp/>
+        <GuessCharacterComp/>
         <BackComponent />
     </div>
   )

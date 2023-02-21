@@ -15,7 +15,7 @@ const App = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/memotest' element={<MemoTestPage />} />
         <Route path='/wpm' element={<WpmPage />} />
-        <Route path='/gteam' element={<GuessPage />} />
+        <Route path='/gcharacter' element={<GuessPage />} />
         <Route path='*' element={ <Navigate to={'/'} /> } />
       </Routes>
 

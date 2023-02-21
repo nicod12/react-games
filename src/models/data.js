@@ -15,7 +15,7 @@ export const games = [
         id:3,
         name:"Who is it?",
         image:"https://i.postimg.cc/66k06mjf/pelota.png",
-        path:"/gteam"
+        path:"/gcharacter"
     }
 ]
 

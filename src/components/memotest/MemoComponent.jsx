@@ -27,7 +27,7 @@ const MemoComponent = () => {
   useEffect(() => {
     if (guessed.length === images.length){
       alert("You Win");
-      location.reload();
+      window.location.reload(false);
     }
   }, [guessed])
 
