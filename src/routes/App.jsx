@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route index element={<HomePage />} /> 
         <Route path='/memotest' element={<MemoTestPage />} />
         <Route path='/wpm' element={<WpmPage />} />
         <Route path='/gcharacter' element={<GuessPage />} />
