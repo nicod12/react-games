@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import {clearCache} from "clear-cache"
+
 
 
 
@@ -55,7 +55,6 @@ const GuessCharacterComp = () => {
   }
 
   function refreshPage() {
-    clearCache();
     location.reload(false);
   }
 
