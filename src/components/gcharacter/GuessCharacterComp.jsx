@@ -25,7 +25,7 @@ const characters = [
 "4nCXQ8sK/dexter.png",
 "bNdN9GbP/coraje.png"
 
-].sort(() => Math.random() - 0.20);
+].sort(() => Math.random() - 0.20 );
 
 const MATCH = Math.floor(Math.random() * characters.length);
 
@@ -110,15 +110,23 @@ const GuessCharacterComp = () => {
                                 mb-2 sm:mb-2 md:mb-6 lg:mb-2 xl:mb-3 
                                 sm:text-md md:text-lg lg:text-2xl xl:text-2xl' 
                     />
+                  <div className='grid grid-rows-1 items-center justify-center m-2'>
                     <button 
-                      className="mt-4 w-full bg-gray-800 hover:bg-black
-                              text-white text-lg uppercase font-bold 
-                                mb-4 sm:mb-8 md:mb-8 lg:mb-8 xl:mb-8
-                                p-0 sm:p-1 md:p-2 lg:p-1 xl:p-4
-                               rounded shadow-sm shadow-black border border-gray-500"
-                      >
-                        Submit
+                      className='w-10'
+                      onClick={refreshPage}
+                    >
+                        <img src="https://cdn-icons-png.flaticon.com/128/93/93641.png" alt="" />
                       </button>
+                  </div>
+                    <button 
+                        className="mt-4 w-full bg-gray-800 hover:bg-black
+                                text-white text-lg uppercase font-bold 
+                                  mb-4 sm:mb-8 md:mb-8 lg:mb-8 xl:mb-8
+                                  p-0 sm:p-1 md:p-2 lg:p-1 xl:p-4
+                                rounded shadow-sm shadow-black border border-gray-500"
+                        >
+                         Submit
+                    </button>
                   </form>
                 </div>
               )
