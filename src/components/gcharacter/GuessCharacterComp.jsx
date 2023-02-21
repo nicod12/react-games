@@ -56,6 +56,7 @@ const GuessCharacterComp = () => {
 
   function refreshPage() {
     window.location.reload(false);
+
   }
 
 

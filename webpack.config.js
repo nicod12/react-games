@@ -1,15 +1,21 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const InlineSourceWebpackPlugin = require('inline-source-webpack-plugin');
 
 
 module.exports = { 
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js',
+    },
     devServer: {
        static: {
         directory: path.join(__dirname,"public")
        },
        compress:true,
        port:3000,
-       historyApiFallback: true
+       historyApiFallback: true,
     },
     module: {
         rules: [
@@ -34,6 +40,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: './index.html'
-        })
+        }),
+        new CleanWebpackPlugin(),
+        new InlineSourceWebpackPlugin({
+            compress: true,
+            rootpath: './src',
+            noAssetMatch: 'warn'
+          })
     ],
 }
