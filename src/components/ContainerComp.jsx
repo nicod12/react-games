@@ -51,7 +51,7 @@ const ContainerComp = () => {
      </div>
         {
             isReadyForInstall && <div className='flex flex-col justify-center'>
-                                    <button className='text-xl'
+                                    <button className='text-xl uppercase'
                                     onClick={downloadApp}
                                     >
                                         Download
