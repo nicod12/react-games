@@ -1,19 +1,64 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { games } from '../models/data'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { games } from '../models/data';
 
 const ContainerComp = () => {
+    const [isReadyForInstall, setIsReadyForInstall] = useState(false);
+
+    useEffect(() => {
+    window.addEventListener("beforeinstallprompt", (event) => {
+        // Prevent the mini-infobar from appearing on mobile.
+        event.preventDefault();
+        console.log("👍", "beforeinstallprompt", event);
+        // Stash the event so it can be triggered later.
+        window.deferredPrompt = event;
+        // Remove the 'hidden' class from the install button container.
+        setIsReadyForInstall(true);
+    });
+    }, []);
+
+    async function downloadApp() {
+        console.log("👍", "butInstall-clicked");
+        const promptEvent = window.deferredPrompt;
+        if (!promptEvent) {
+          // The deferred prompt isn't available.
+          console.log("oops, no prompt event guardado en window");
+          return;
+        }
+        // Show the install prompt.
+        promptEvent.prompt();
+        // Log the result
+        const result = await promptEvent.userChoice;
+        console.log("👍", "userChoice", result);
+        // Reset the deferred prompt variable, since
+        // prompt() can only be called once.
+        window.deferredPrompt = null;
+        // Hide the install button.
+        setIsReadyForInstall(false);
+      }
+
   return (
    <main>
-    <section className='flex items-center justify-center 
-                        mt-12 sm:mt-12 md:mb-12 lg:mb-12 xl:mb-12
-                        '>
-     <h1 className='text-center font-bold text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl '>WP-Games</h1>
-     <img 
-        src="https://i.postimg.cc/j21dZpXz/pngegg-4.png" 
-        alt="icon" 
-        className='w-5 sm:w-6 sm:h-7 md:w-12 md:h-14 lg:w-18 lg:h-12 xl:w-22 xl:h-12'
-    />
+    <section className='mt-12 sm:mt-12 md:mb-12 lg:mb-12 xl:mb-12'
+    >
+     <div className='flex items-center justify-center'>
+        <h1 className='text-center font-bold text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl '>WP-Games</h1>
+        <img 
+            src="https://i.postimg.cc/j21dZpXz/pngegg-4.png" 
+            alt="icon" 
+            className='w-5 sm:w-6 sm:h-7 md:w-12 md:h-14 lg:w-18 lg:h-12 xl:w-22 xl:h-12'
+        />
+     </div>
+        {
+            isReadyForInstall && <div className='flex flex-col justify-center'>
+                                    <button className='text-xl'
+                                    onClick={downloadApp}
+                                    >
+                                        Download
+                                    </button>
+                                </div>
+        }
+        
     </section>
         <section className="m-6 grid grid-col-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 
                             gap-12 sm:gap-10 md:gap-7 lg:gap-9 xl:gap-14
