@@ -86,7 +86,7 @@ const GuessCharacterComp = () => {
                   <p className='text-center 
                                 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
                   >
-                    The player is: <span className='font-bold'>{character.toUpperCase()}</span>
+                    The character is: <span className='font-bold'>{character.toUpperCase()}</span>
                   </p>
                   <button
                     className="m-6 m w-36 sm:w-40  p-1 sm:p-2  bg-gray-800 hover:bg-black text-white text-lg uppercase font-bold rounded" 

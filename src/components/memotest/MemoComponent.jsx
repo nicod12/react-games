@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import useCounter from '../../utils/hooks/useCounter';
 
 export const images = [
 "https://cdn-icons-png.flaticon.com/128/9412/9412332.png",
@@ -12,11 +13,16 @@ export const images = [
 const MemoComponent = () => {
   const [guessed, setGuessed] = useState([]);
   const [selected, setSelected] = useState([]);
+  const correct = useCounter(0);
+  const errors = useCounter(0);
 
   useEffect(() => {
     if(selected.length === 2) {
       if(selected[0].split("|")[1] === selected[1].split("|")[1]) {
-        setGuessed((guessed) => guessed.concat(selected))
+        setGuessed((guessed) => guessed.concat(selected));
+        correct.increment();
+      }else {
+        errors.increment();
       }
       setTimeout(() => setSelected([]), 1500)
     }
@@ -63,6 +69,18 @@ const MemoComponent = () => {
               )
           })}
         </ul>
+        {
+          correct.value  ?
+            (<p className='text-lg text-green-500 mt-2'>Correct: {correct.value}</p>)
+            :
+            ("")
+        }
+         {
+          errors.value  ?
+            (<p className='text-lg text-red-500 mt-1'>Errors: {errors.value}</p>)
+            :
+            ("")
+        }
       </section>
   )
 }
