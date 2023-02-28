@@ -4,7 +4,11 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const InlineSourceWebpackPlugin = require('inline-source-webpack-plugin');
 
 
-module.exports = { 
+module.exports = {
+    entry: {
+        'app': "./src/index.jsx",
+        'service-worker': "./src/service-worker.js",
+    }, 
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
