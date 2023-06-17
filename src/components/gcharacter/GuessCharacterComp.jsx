@@ -13,7 +13,7 @@ const characters = [
 "4KbGMkz2/homero.png",
 "kV93W1kQ/hulk.png",
 "9Rm2H8bm/jerry.png",
-"tn7HYs88/lilo.png",
+"tn7HYs88/stitch.png",
 "nMLxdWMT/pikachu.png",
 "0rHshCwv/porky.png",
 "Xr96GSDN/pumba.png",
