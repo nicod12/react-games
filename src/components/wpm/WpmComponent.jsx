@@ -52,7 +52,7 @@ const WpmComponent = () => {
       <h3 className='text-center mb-6 sm:mb-4 md:mb-8 lg:mb-12 xl:mb-16
         sm:text-lg md:text-2xl lg:text-2xl xl:text-5xl'
         >
-        Measure your speed in words per minute.
+        Mide tu velocidad en palabras por minuto.
       </h3>
       <div className='flex flex-col gap-3 text-center'>
         {Boolean(time) && <h2 className='text-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
@@ -63,14 +63,14 @@ const WpmComponent = () => {
           {
             errors.value ? (
               <p className='mb-2 text-red-600  sm:text-xl md:text-xl lg:text-2xl xl:text-4xl'>
-                Wrong words: {errors.value}
+                Errores: {errors.value}
               </p>
             ): (
               ""
             )
           }
-        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Character typed: {characterCount}</h3>
-        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Remaining time: {time}</h3>
+        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Caracteres: {characterCount}</h3>
+        <h3 className='mb-1 sm:mb-2 md:mb-6 lg:mb-6 xl:mb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl'>Tiempo restante: {time}</h3>
         {
           time ? (
             <form onSubmit={handleSubmit}>
@@ -105,7 +105,7 @@ const WpmComponent = () => {
                           sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl
                           mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12"
               >
-                Play
+                Jugar
               </button>
             </section>
           )}

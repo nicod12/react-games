@@ -39,7 +39,7 @@ const MemoComponent = () => {
       <section className='flex flex-col items-center justify-center'>
         <h3 className='mb-16 text-center'
         >
-          Memotest is a game that stimulates memory and observation skills.
+         El Memotest es un juego que permite desarrollar atención, concentración, memoria, reconocimiento visual y orientarse en el espacio
         </h3>
         <ul className='border border-gray-300 rounded-sm p-4 grid grid-cols-3 gap-3 shadow-2xl'
       >
@@ -71,13 +71,13 @@ const MemoComponent = () => {
         </ul>
         {
           correct.value  ?
-            (<p className='text-lg text-green-500 mt-2'>Correct: {correct.value}</p>)
+            (<p className='text-lg text-green-500 mt-2'>Aciertos: {correct.value}</p>)
             :
             ("")
         }
          {
           errors.value  ?
-            (<p className='text-lg text-red-500 mt-1'>Errors: {errors.value}</p>)
+            (<p className='text-lg text-red-500 mt-1'>Errores: {errors.value}</p>)
             :
             ("")
         }

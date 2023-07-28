@@ -64,7 +64,7 @@ const GuessCharacterComp = () => {
         <p className='w-auto sm:w-auto md:w-auto lg:w-auto xl:w-auto  text-lg sm:text-md md:text-xl lg:text-2xl xl:text-4xl
                        mb-12 mt-6 sm:mb-6 md:mb-20 lg:mb-20 xl:mb-20'
         >
-          Guess the character
+          Adivina el personaje
         </p>
        <section className='flex flex-col justify-center items-center 
                         bg-gradient-to-br from-blue-100 via-pink-100 to-slate-300
@@ -86,13 +86,13 @@ const GuessCharacterComp = () => {
                   <p className='text-center 
                                 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
                   >
-                    The character is: <span className='font-bold'>{character.toUpperCase()}</span>
+                   El personaje es: <span className='font-bold'>{character.toUpperCase()}</span>
                   </p>
                   <button
                     className="m-6 m w-36 sm:w-40  p-1 sm:p-2  bg-gray-800 hover:bg-black text-white text-lg uppercase font-bold rounded" 
                     onClick={refreshPage}
                   >
-                    Play again
+                    Juega de nuevo
                   </button>
               </section>
           
